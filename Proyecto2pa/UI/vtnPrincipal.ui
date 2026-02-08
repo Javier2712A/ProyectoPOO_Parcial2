@@ -1,0 +1,522 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Sistema de Administración de Cine</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#btnBuscar, #btnGuardar, #btnActualizar, #btnEliminar, #btnLimpiar {
+    background-color: white;
+    color: black;
+    border: 2px solid #444;
+    border-radius: 10px;
+    font-weight: bold;
+    padding: 8px 14px;
+}
+
+#btnBuscar:hover, #btnGuardar:hover, #btnActualizar:hover, #btnEliminar:hover, #btnLimpiar:hover {
+    background-color: #f2f2f2;
+}
+
+#btnBuscar:pressed, #btnGuardar:pressed, #btnActualizar:pressed, #btnEliminar:pressed, #btnLimpiar:pressed {
+    background-color: #e6e6e6;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="lblTitulo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>760</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SISTEMA DE GESTIÓN DE CINE</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblSubtitulo">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>50</y>
+      <width>760</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Control de funciones y películas</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblBuscarPor">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>100</y>
+      <width>150</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Buscar por código:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtBuscarCodigo">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>100</y>
+      <width>460</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>Ingrese código...</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnBuscar">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>100</y>
+      <width>120</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
+    <property name="text">
+     <string>Buscar</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblTipoEvento">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>160</y>
+      <width>150</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Tipo de evento:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblNombre">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>200</y>
+      <width>150</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Nombre:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtNombre">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>200</y>
+      <width>590</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblCodigo">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>240</y>
+      <width>150</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Código:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtCodigo">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>240</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblFecha">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>280</y>
+      <width>150</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Fecha:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtFecha">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>280</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>DD-MM-YYYY</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblHora">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>280</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Hora:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtHora">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>280</y>
+      <width>161</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <property name="placeholderText">
+     <string>HH:MM</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblPrecio">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>320</y>
+      <width>150</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Precio base ($):</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtPrecio">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>320</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblSala">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>320</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Sala:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtSala">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>320</y>
+      <width>161</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblEstado">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>360</y>
+      <width>150</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Estado:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cbxEstado">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>360</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>SELECCIONAR</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Disponible</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Cancelado</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Finalizado</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>En curso</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="lblCalidad">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>360</y>
+      <width>80</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Calidad:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cbxCalidad">
+    <property name="geometry">
+     <rect>
+      <x>549</x>
+      <y>360</y>
+      <width>161</width>
+      <height>30</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>SELECCIONAR</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>2D</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>3D</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>VIP</string>
+     </property>
+    </item>
+   </widget>
+   <widget class="QLabel" name="lblAsientos">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>400</y>
+      <width>150</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Asientos vendidos:</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtAsientos">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>400</y>
+      <width>200</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDuracion">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>400</y>
+      <width>121</width>
+      <height>25</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Duración (min):</string>
+    </property>
+   </widget>
+   <widget class="QLineEdit" name="txtDuracion">
+    <property name="geometry">
+     <rect>
+      <x>549</x>
+      <y>400</y>
+      <width>161</width>
+      <height>30</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnGuardar">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>480</y>
+      <width>180</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Guardar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnActualizar">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>480</y>
+      <width>180</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Actualizar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnEliminar">
+    <property name="geometry">
+     <rect>
+      <x>410</x>
+      <y>480</y>
+      <width>180</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Eliminar</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnLimpiar">
+    <property name="geometry">
+     <rect>
+      <x>600</x>
+      <y>480</y>
+      <width>180</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Limpiar</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cbxTipoEvento">
+    <property name="geometry">
+     <rect>
+      <x>190</x>
+      <y>150</y>
+      <width>461</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <item>
+     <property name="text">
+      <string>SELECCIONAR</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Función Estelar</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Función Infantil</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Función Premium</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Noche de Terror 3D</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string>Especial Viernes</string>
+     </property>
+    </item>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
