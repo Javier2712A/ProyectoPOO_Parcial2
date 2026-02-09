@@ -198,7 +198,7 @@ class ServicioCine:
 > **Nota:** Las capturas muestran fecha y hora del sistema visibles
 
 ### Pantalla Principal
-<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221556" src="https://github.com/user-attachments/assets/f09d6ec0-e57a-4bd6-9d34-8bc45834c84e"
+<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221556" src="https://github.com/user-attachments/assets/70d0933d-7eaf-45c1-928e-7d3cb010a7a1" />
 
 ### Operación CRUD - Guardar
 <img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221556" src="https://github.com/user-attachments/assets/5af1faf3-462c-4ddb-999c-deea41722920" />
@@ -232,8 +232,8 @@ class ServicioCine:
 
 <div align="center">
 
-**Desarrollado con ❤️ por el Grupo 9**
+**Desarrollado por el Grupo 9**
 
-Febrero 2026 • Versión 2.0 • ✅ Completo y Funcional
+Febrero 2026 - Completo y Funcional
 
 </div>
