@@ -125,19 +125,6 @@ class ServicioCine:
 **Base de datos:** `CineDB`  
 **Tabla:** `ServiciosCine`
 
-| Campo | Tipo | Descripción |
-|-------|------|-------------|
-| codigo | VARCHAR(10) | PRIMARY KEY |
-| tipo_evento | VARCHAR(100) | Tipo de función |
-| nombre | VARCHAR(100) | Nombre de película |
-| fecha | DATETIME | Fecha y hora |
-| precio_base | DECIMAL(10,2) | Precio base |
-| sala | INT | Número de sala |
-| calidad | VARCHAR(10) | 2D, 3D o VIP |
-| asientos_vendidos | INT | Asientos vendidos |
-| duracion_min | INT | Duración en minutos |
-| estado | VARCHAR(20) | Disponible/Cancelado/Finalizado/En curso |
-
 **Datos de ejemplo:**
 
 | Código | Tipo Evento | Nombre | Calidad |
@@ -150,37 +137,6 @@ class ServicioCine:
 
 ---
 
-##  Instalación
-
-### 1. Clonar el repositorio
-
-```bash
-git clone https://github.com/Javier2712A/ProyectoPOO_Parcial2.git
-cd ProyectoPOO_Parcial2
-```
-
-### 2. Instalar dependencias
-
-```bash
-pip install PyQt6 pyodbc
-```
-
-### 3. Configurar base de datos
-
-1. Abrir **SQL Server Management Studio (SSMS)**
-2. Ejecutar el archivo `schema.sql`
-3. Verificar que se creó la base de datos `CineDB`
-
-### 4. Configurar conexión (si es necesario)
-
-Si tu servidor SQL Server es diferente, editar `Datos/conexion.py` línea 11:
-
-```python
-_SERVIDOR = 'TU-SERVIDOR-AQUI'  # Cambiar por tu servidor
-```
-
----
-
 ##  Instrucciones de Ejecución
 
 ```bash
@@ -190,14 +146,13 @@ python Main/main.py
 
 **Salida esperada:**
 ```
-============================================================
-  SISTEMA DE GESTIÓN DE CINE - 2DO PARCIAL POO
-============================================================
 
-✓ Conexión exitosa a SQL Server
-✓ Base de datos: CineDB
-✓ Sistema listo para usar
-✓ Iniciando interfaz gráfica...
+  SISTEMA DE GESTIÓN DE CINE - 2DO PARCIAL POO
+
+ Conexión exitosa a SQL Server
+ Base de datos: CineDB
+ Sistema listo para usar
+ Iniciando interfaz gráfica...
 ```
 
 La ventana gráfica se abrirá automáticamente.
@@ -265,26 +220,31 @@ class ServicioCine:
 > **Nota:** Las capturas muestran fecha y hora del sistema visibles
 
 ### Pantalla Principal
-![Pantalla Principal](./capturas/01_pantalla_principal.png)
+![Pantalla Principal](<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221556" src="https://github.com/user-attachments/assets/f09d6ec0-e57a-4bd6-9d34-8bc45834c84e" />
+)
 
 ### Operación CRUD - Guardar
-![Guardar](./capturas/02_guardar_servicio.png)
+![Guardar](<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221844" src="https://github.com/user-attachments/assets/2a285507-775e-47e3-8c89-e33f2c638220" />
+)
 
 ### Operación CRUD - Buscar
-![Buscar](./capturas/03_buscar_servicio.png)
+![Buscar](<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221903" src="https://github.com/user-attachments/assets/d8d38a27-2ec4-47f0-b7b3-9dd606eefb07" />
+)
 
 ### Base de Datos
-![SQL Server](./capturas/04_tabla_sql_server.png)
+![SQL Server](<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/c155fed8-d11b-46a7-a249-f4d66f0a2daf" />
+)
 
 ### Consola con Fecha y Hora
-![Consola](./capturas/05_consola_ejecucion.png)
+![Consola](<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/550ac06c-677b-418e-9d1a-11592f3787ed" />
+)
 
 ---
 
 ##  Video Demostrativo
 
 **Duración:** 2 minutos  
-**Link:** [Ver Video](COLOCAR-LINK-AQUI)
+**Link:** [Ver Video](https://drive.google.com/file/d/1qGOWsKdjGw-IsmTRv3R80Z26qNe8b-4W/view?usp=sharing)
 
 **Contenido del video:**
 - Demostración CRUD completo
@@ -292,45 +252,6 @@ class ServicioCine:
 - Encapsulamiento
 - Patrones de diseño
 - Ejecución en vivo
-
->  **Importante:** Reemplazar `COLOCAR-LINK-AQUI` con el link de tu video en YouTube o Google Drive con permisos de visualización.
-
----
-
-##  Requisitos del Sistema
-
-- Python 3.8 o superior
-- SQL Server (cualquier versión)
-- ODBC Driver 17 for SQL Server
-- Windows 10/11 (recomendado)
-
----
-
-##  Solución de Problemas
-
-### Error: "ODBC Driver 17 not found"
-**Solución:** Descargar e instalar desde https://go.microsoft.com/fwlink/?linkid=2223304
-
-### Error: "Database 'CineDB' not found"
-**Solución:** Ejecutar el archivo `schema.sql` en SSMS
-
-### Error: No puede conectar al servidor
-**Solución:** Verificar que SQL Server esté corriendo y cambiar el servidor en `conexion.py`
-
----
-
-##  Contacto
-
-**Repositorio:** https://github.com/Javier2712A/ProyectoPOO_Parcial2  
-**Issues:** https://github.com/Javier2712A/ProyectoPOO_Parcial2/issues
-
----
-
-##  Licencia
-
-Proyecto académico desarrollado para la asignatura de **Programación Orientada a Objetos** en la **Universidad Estatal de Guayaquil**.
-
-MIT License - Copyright (c) 2026 Grupo 9 - POO
 
 ---
 
