@@ -27,17 +27,6 @@ Sistema de **Gestión de Cine** con interfaz gráfica PyQt6 y base de datos SQL 
 
 ---
 
-##  Tecnologías Utilizadas
-
-| Tecnología | Versión |
-|------------|---------|
-| Python | 3.8+ |
-| PyQt6 | 6.6.1 |
-| SQL Server | 2019+ |
-| pyodbc | 5.0.1 |
-
----
-
 ##  Estructura del Proyecto
 
 ```
@@ -185,7 +174,7 @@ La ventana gráfica se abrirá automáticamente.
 
 ##  Conceptos POO Implementados
 
-### 1. Encapsulamiento 
+### Encapsulamiento 
 ```python
 class ServicioCine:
     def __init__(self, codigo, tipo_evento, ...):
@@ -202,17 +191,6 @@ class ServicioCine:
             raise ValueError("No puede estar vacío")
         self._tipo_evento = valor
 ```
-
-### 2. Abstracción 
-- Arquitectura en 4 capas
-- Separación de responsabilidades
-- El usuario no ve la complejidad interna
-
-### 3. Patrones de Diseño 
-- **Singleton:** Conexión única a BD
-- **DAO:** Separación de lógica de datos
-- **MVC:** Separación Modelo-Vista-Controlador
-
 ---
 
 ##  Capturas de Pantalla
@@ -220,24 +198,21 @@ class ServicioCine:
 > **Nota:** Las capturas muestran fecha y hora del sistema visibles
 
 ### Pantalla Principal
-![Pantalla Principal](<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221556" src="https://github.com/user-attachments/assets/f09d6ec0-e57a-4bd6-9d34-8bc45834c84e" />
-)
+<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221556" src="https://github.com/user-attachments/assets/f09d6ec0-e57a-4bd6-9d34-8bc45834c84e"
 
 ### Operación CRUD - Guardar
-![Guardar](<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221844" src="https://github.com/user-attachments/assets/2a285507-775e-47e3-8c89-e33f2c638220" />
-)
+<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221556" src="https://github.com/user-attachments/assets/5af1faf3-462c-4ddb-999c-deea41722920" />
+
 
 ### Operación CRUD - Buscar
-![Buscar](<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221903" src="https://github.com/user-attachments/assets/d8d38a27-2ec4-47f0-b7b3-9dd606eefb07" />
-)
+<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221903" src="https://github.com/user-attachments/assets/b32213c7-20d3-4b29-b36b-72abd78e61e7" />
 
 ### Base de Datos
-![SQL Server](<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/c155fed8-d11b-46a7-a249-f4d66f0a2daf" />
-)
+<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 230511" src="https://github.com/user-attachments/assets/2ae1787d-f0e4-44fc-9b68-40c895b17a84" />
+
 
 ### Consola con Fecha y Hora
-![Consola](<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/550ac06c-677b-418e-9d1a-11592f3787ed" />
-)
+<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 230552" src="https://github.com/user-attachments/assets/024854b9-05bb-4c04-96bc-b4a52984d9cd" />
 
 ---
 
