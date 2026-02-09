@@ -1,7 +1,7 @@
-# #  Sistema de Gestión de Cine - Segundo Parcial POO
+# #  Sistema de Gestión Servicio-Cine - Segundo Parcial POO
 
 **Programación Orientada a Objetos**  
-**Grupo 9 - Gestión de Servicios de Cine**  
+**Grupo 9 - Gestión de Servicios Servicio-Cine**  
 **Universidad Estatal de Guayaquil**
 
 ---
@@ -201,7 +201,7 @@ class ServicioCine:
 <img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221556" src="https://github.com/user-attachments/assets/70d0933d-7eaf-45c1-928e-7d3cb010a7a1" />
 
 ### Operación CRUD - Guardar
-<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221556" src="https://github.com/user-attachments/assets/5af1faf3-462c-4ddb-999c-deea41722920" />
+<img width="1600" height="900" alt="Captura de pantalla 2026-02-08 221844" src="https://github.com/user-attachments/assets/a7163495-c517-4513-ab9f-150f46a2f961" />
 
 
 ### Operación CRUD - Buscar
